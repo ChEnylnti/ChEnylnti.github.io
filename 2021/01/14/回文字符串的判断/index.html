@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/profile.png">
-  <title>ChEnylnti</title>
+  <title>回文字符串的判断 | ChEnylnti</title>
   <meta name="author" content="ChEnylnti" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,15 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="算法, 蓝桥杯" />
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ChEnylnti">
-<meta property="og:url" content="http://example.com/search/index.html">
+  <meta name="description" content="概念： 设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n&#x3D;1234321，则称n为一回文数；但若n&#x3D;1234567，则n不是回文数。 分析： 设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等 1234567891011121314&#x2F;&#x2F;回文数判断	System.out.println(&quot;请输入一个字符串:&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="回文字符串的判断">
+<meta property="og:url" content="http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/index.html">
 <meta property="og:site_name" content="ChEnylnti">
+<meta property="og:description" content="概念： 设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n&#x3D;1234321，则称n为一回文数；但若n&#x3D;1234567，则n不是回文数。 分析： 设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等 1234567891011121314&#x2F;&#x2F;回文数判断	System.out.println(&quot;请输入一个字符串:&amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/profile.png">
+<meta property="article:published_time" content="2021-01-14T15:51:35.156Z">
+<meta property="article:modified_time" content="2021-01-15T06:35:44.503Z">
 <meta property="article:author" content="ChEnylnti">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="蓝桥杯">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/profile.png">
 <meta name="twitter:site" content="@ChEnylnti">
@@ -119,36 +125,147 @@
                     
         <div id="main">
             <section class="col-md-8">
-    <div class="kratos-hentry kratos-post-inner clearfix">
-        <div class="kratos-post-content">
-            <h2 class="title-h2 text-center">搜索</h2>
-            <form class="input-group" onsubmit="return inpSearch();">
-                <input class="form-input input-lg" id="search-input" maxlength="80" name="s" placeholder="有什么想找找看的呢o(*￣▽￣*)ブ" required type="search">
-                <button class="btn btn-primary" type="submit">找一找~</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="alert alert-info" id="kr-search-notice">
-        这里是 ChEnylnti 的搜索引擎~
-    </div>
-
-    <div id="result-posts">
+    <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center">回文字符串的判断</h1>
+                
+                <div class="kratos-post-meta text-center">
+                    <span>
+                        <i class="fa fa-calendar"></i> 2021-01-14
+                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/">算法</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/">java</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a>
+                        <i class="fa fa-user"></i> 作者 ChEnylnti
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            612
+                        
+                        字
+                        
+                    </span>
+                </div>
+            </header>
             <div class="kratos-post-content">
-                <p>搜索多个关键词时请用空格分割，例如「算法 蓝桥杯 进制转换」这样；</p>
-                <p>您也可以使用这些标签碰碰运气哦~</p>
-                <p class="search-demo-tags">
-                    <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 24px; color: #6c7588">算法</a> <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 24px; color: #6c7588">蓝桥杯</a> <a href="/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" style="font-size: 18px; color: #b2b7be">进制转换</a> <a href="/tags/%E6%84%8F%E4%B9%89%E4%B8%8D%E6%98%8E/" style="font-size: 18px; color: #b2b7be">-意义不明</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 18px; color: #b2b7be">位运算</a>
-                </p>
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1610692544503"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                <hr />
+                <p><strong>概念</strong>：</p>
+<p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。</p>
+<p><strong>分析</strong>：</p>
+<p>设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回文数判断</span></span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个字符串:&quot;</span>);</span><br><span class="line">	Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	String str =in.nextLine();</span><br><span class="line">	<span class="keyword">boolean</span> isPalindrome=<span class="keyword">false</span>;</span><br><span class="line">	<span class="keyword">int</span> begin=<span class="number">0</span>,end =str.length()-<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(begin&lt;end &amp;&amp;str.charAt(begin)==str.charAt(end)) &#123;</span><br><span class="line">		begin++;</span><br><span class="line">		end--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(begin &gt;=end) &#123;  <span class="comment">//奇数情况下若是回文数begin会等于end，偶数情况下begin会大于end</span></span><br><span class="line">		isPalindrome =<span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(str+(isPalindrome?<span class="string">&quot;&quot;</span>:<span class="string">&quot;不&quot;</span>)+<span class="string">&quot;是一个回文字符串&quot;</span>);</span><br></pre></td></tr></table></figure>
+
             </div>
-        </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
     </div>
-
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/";
+            const title         = "「回文字符串的判断」";
+            const excerpt       = `概念：
+设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。
+分析：
+设置两个指针，一个从第一个开始，一个从后面开...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>, <a class="tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag">蓝桥杯</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-01-15</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" 找出距离最小的点对" href="/2021/01/14/找出距离最小的点对/">&lt; 上一篇</a>
+                </div>
+                
+                
+            </nav>
+        
+        
+    </article>
 </section>
-
-<script>var searchDataFile = "/search.json";</script>
-<script defer src="/js/local-search.min.js"></script>
         </div>
                 
             <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
