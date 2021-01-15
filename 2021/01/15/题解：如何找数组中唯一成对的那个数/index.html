@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/profile.png">
-  <title>回文字符串的判断 | ChEnylnti</title>
+  <title>题解：如何找数组中唯一成对的那个数 | ChEnylnti</title>
   <meta name="author" content="ChEnylnti" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="算法, 蓝桥杯" />
+    <meta name="keywords" content="位运算, 算法, 蓝桥杯" />
   
-  <meta name="description" content="概念： 设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n&#x3D;1234321，则称n为一回文数；但若n&#x3D;1234567，则n不是回文数。 分析： 设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等 1234567891011121314&#x2F;&#x2F;回文数判断	System.out.println(&quot;请输入一个字符串:&amp;q">
+  <meta name="description" content="题目描述：1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？ 分析：根据a^a&#x3D;0,a^0&#x3D;a这两条性质，我们可以把数组中的元素全部异或起来，然后再异或一遍不重复的所有元素，就是(1^2^3^4^2)^(1^2^3^4)，这样把它们凑起来，最后结果就应该是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回文字符串的判断">
-<meta property="og:url" content="http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/index.html">
+<meta property="og:title" content="题解：如何找数组中唯一成对的那个数">
+<meta property="og:url" content="http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/index.html">
 <meta property="og:site_name" content="ChEnylnti">
-<meta property="og:description" content="概念： 设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n&#x3D;1234321，则称n为一回文数；但若n&#x3D;1234567，则n不是回文数。 分析： 设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等 1234567891011121314&#x2F;&#x2F;回文数判断	System.out.println(&quot;请输入一个字符串:&amp;q">
+<meta property="og:description" content="题目描述：1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？ 分析：根据a^a&#x3D;0,a^0&#x3D;a这两条性质，我们可以把数组中的元素全部异或起来，然后再异或一遍不重复的所有元素，就是(1^2^3^4^2)^(1^2^3^4)，这样把它们凑起来，最后结果就应该是">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/profile.png">
-<meta property="article:published_time" content="2021-01-14T15:51:35.156Z">
-<meta property="article:modified_time" content="2021-01-15T06:35:44.503Z">
+<meta property="article:published_time" content="2021-01-15T08:13:35.166Z">
+<meta property="article:modified_time" content="2021-01-15T08:10:24.114Z">
 <meta property="article:author" content="ChEnylnti">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="蓝桥杯">
+<meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/profile.png">
 <meta name="twitter:site" content="@ChEnylnti">
@@ -128,17 +129,17 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">回文字符串的判断</h1>
+                <h1 class="kratos-entry-title text-center">题解：如何找数组中唯一成对的那个数</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                        <i class="fa fa-calendar"></i> 2021-01-14
-                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/">算法</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/">java</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a>
+                        <i class="fa fa-calendar"></i> 2021-01-15
+                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/">算法</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/">java</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/">位运算的奇巧淫技</a>
                         <i class="fa fa-user"></i> 作者 ChEnylnti
                         <i class="fa fa-edit"></i> 
                         
                         
-                            612
+                            635
                         
                         字
                         
@@ -147,15 +148,13 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1610692544503"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1610698224114"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <p><strong>概念</strong>：</p>
-<p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。</p>
-<p><strong>分析</strong>：</p>
-<p>设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回文数判断</span></span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个字符串:&quot;</span>);</span><br><span class="line">	Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	String str =in.nextLine();</span><br><span class="line">	<span class="keyword">boolean</span> isPalindrome=<span class="keyword">false</span>;</span><br><span class="line">	<span class="keyword">int</span> begin=<span class="number">0</span>,end =str.length()-<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(begin&lt;end &amp;&amp;str.charAt(begin)==str.charAt(end)) &#123;</span><br><span class="line">		begin++;</span><br><span class="line">		end--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(begin &gt;=end) &#123;  <span class="comment">//奇数情况下若是回文数begin会等于end，偶数情况下begin会大于end</span></span><br><span class="line">		isPalindrome =<span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(str+(isPalindrome?<span class="string">&quot;&quot;</span>:<span class="string">&quot;不&quot;</span>)+<span class="string">&quot;是一个回文字符串&quot;</span>);</span><br></pre></td></tr></table></figure>
+                <h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？</p>
+<h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>根据a^a=0,a^0=a这两条性质，我们可以把数组中的元素全部异或起来，然后再异或一遍不重复的所有元素，就是(1^2^3^4^2)^(1^2^3^4)，这样把它们凑起来，最后结果就应该是2^2^2=2^0=2，正好是要找的重复元素</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">1001</span>,sum1 =<span class="number">0</span>,sum2=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span>[] arr =<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-<span class="number">1</span>;i++) &#123;</span><br><span class="line">		arr[i]=i+<span class="number">1</span>;</span><br><span class="line">		sum1 ^=arr[<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	arr[n-<span class="number">1</span>]=<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选重复的数</span></span><br><span class="line">	sum2 =sum1^arr[n-<span class="number">1</span>];<span class="comment">//sum2为sum1除去重复的数</span></span><br><span class="line">	<span class="keyword">int</span> idx =<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选取一个数作为随机数的下标</span></span><br><span class="line">	&#123;<span class="comment">//交换</span></span><br><span class="line">		<span class="keyword">int</span> t=arr[idx];</span><br><span class="line">		arr[idx]=arr[n-<span class="number">1</span>];</span><br><span class="line">		arr[n-<span class="number">1</span>] = t;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(sum1^sum2);</span><br></pre></td></tr></table></figure>
 
             </div>
             
@@ -209,7 +208,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/",
+                text: "http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -221,12 +220,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/";
-            const title         = "「回文字符串的判断」";
-            const excerpt       = `概念：
-设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。
-分析：
-设置两个指针，一个从第一个开始，一个从后面开...`;
+            const hostUrl       = "http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/";
+            const title         = "「题解：如何找数组中唯一成对的那个数」";
+            const excerpt       = `题目描述：1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？
+分析：根据a^a=0,a^0...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -245,7 +242,7 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>, <a class="tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag">蓝桥杯</a>
+                        <a class="tag-none-link" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">位运算</a>, <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>, <a class="tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag">蓝桥杯</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-15</span>
@@ -257,13 +254,9 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" 找出距离最小的点对" href="/2021/01/14/找出距离最小的点对/">&lt; 上一篇</a>
+                    <a title=" 回文字符串的判断" href="/2021/01/14/回文字符串的判断/">&lt; 上一篇</a>
                 </div>
                 
-                
-                <div class="nav-next clearfix">
-                    <a title=" 题解：如何找数组中唯一成对的那个数" href="/2021/01/15/题解：如何找数组中唯一成对的那个数/">下一篇 &gt;</a>
-                </div>
                 
             </nav>
         
