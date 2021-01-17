@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/profile.png">
-  <title>ChEnylnti</title>
+  <title>圆的面积 | ChEnylnti</title>
   <meta name="author" content="ChEnylnti" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,17 +13,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="入门, 实数输出, 算法, 蓝桥杯" />
   
-  <meta name="description" content="Ahoy">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ChEnylnti">
-<meta property="og:url" content="http://example.com/tags/%E9%80%92%E5%BD%92/index.html">
+  <meta name="description" content="题目描述：给定圆的半径r，求圆的面积。 资源限制：时间限制：1.0s  内存限制：256.0MB 输入格式：输入包含一个整数r，表示圆的半径。 输出格式：输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。 样例输入：4 样例输出：50.2654825 数据规模与约定：1&lt;&#x3D;r&lt;&#x3D;10000 提示：本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="圆的面积">
+<meta property="og:url" content="http://example.com/2021/01/16/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/index.html">
 <meta property="og:site_name" content="ChEnylnti">
-<meta property="og:description" content="Ahoy">
+<meta property="og:description" content="题目描述：给定圆的半径r，求圆的面积。 资源限制：时间限制：1.0s  内存限制：256.0MB 输入格式：输入包含一个整数r，表示圆的半径。 输出格式：输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。 样例输入：4 样例输出：50.2654825 数据规模与约定：1&lt;&#x3D;r&lt;&#x3D;10000 提示：本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/profile.png">
+<meta property="article:published_time" content="2021-01-16T14:31:20.256Z">
+<meta property="article:modified_time" content="2021-01-16T14:53:37.914Z">
 <meta property="article:author" content="ChEnylnti">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="蓝桥杯">
+<meta property="article:tag" content="入门">
+<meta property="article:tag" content="实数输出">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/profile.png">
 <meta name="twitter:site" content="@ChEnylnti">
@@ -120,54 +126,163 @@
                 <div class="row">
                     
         <div id="main">
-            
-        <section class="col-md-8">
-            
+            <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center">圆的面积</h1>
                 
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
-                            
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/2021/01/16/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img">
-                                    
-                                </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/">算法</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/">java</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/">练习题</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%85%A5%E9%97%A8%E8%AE%AD%E7%BB%83/">入门训练</a>
-                                    <h2 class="kratos-entry-title-new"><a href="/2021/01/16/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">斐波那契数列</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            问题描述：Fibonacci数列的递推公式为：Fn=Fn-1+Fn-2，其中F1=F2=1。
-当n比较大时，Fn也非常大，现在我们想知道，Fn除以10007的余数是多少。
-资源限制：时间限制：1.0s  内存限制：256.0MB
-输入...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2021-01-16</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    <a class="tag-none-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a>, <a class="tag-none-link" href="/tags/%E5%8F%96%E6%A8%A1/" rel="tag">取模</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E5%88%97/" rel="tag">数列</a>
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/2021/01/16/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
+                <div class="kratos-post-meta text-center">
+                    <span>
+                        <i class="fa fa-calendar"></i> 2021-01-16
+                        <i class="fa fa-folder"></i> 分类 <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/">算法</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/">java</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/">练习题</a>, <a class="label-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%85%A5%E9%97%A8%E8%AE%AD%E7%BB%83/">入门训练</a>
+                        <i class="fa fa-user"></i> 作者 ChEnylnti
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            763
+                        
+                        字
+                        
+                    </span>
+                </div>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1610808817914"></time> 前，其中的内容可能需要更新。
+                </div>
                 
-            
-            
-            
-        </section>
+                <hr />
+                <h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给定圆的半径r，求圆的面积。</p>
+<h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p>
+<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入包含一个整数r，表示圆的半径。</p>
+<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。</p>
+<h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>4</p>
+<h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>50.2654825</p>
+<h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1&lt;=r&lt;=10000</p>
+<h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><p>本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比如PI=3.14159265358979323，也可以使用数学公式来求π，比如PI=atan(1.0)*4。</p>
+<h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>java中保留n为小数的写法为（不唯一）</p>
+<p>String.format(“%.nf”, x)</p>
+<p>n为保留的小数位，x必须为double类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">	Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	<span class="keyword">double</span> r=in.nextDouble();</span><br><span class="line">	<span class="keyword">double</span> s=<span class="number">3.14159265358979323</span>*r*r;</span><br><span class="line">	System.out.println(String.format(<span class="string">&quot;%.7f&quot;</span>, s));</span><br><span class="line">	<span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">	System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/2021/01/16/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/2021/01/16/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/";
+            const title         = "「圆的面积」";
+            const excerpt       = `题目描述：给定圆的半径r，求圆的面积。
+资源限制：时间限制：1.0s  内存限制：256.0MB
+输入格式：输入包含一个整数r，表示圆的半径。
+输出格式：输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。
+样例输入：4
+...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a>, <a class="tag-none-link" href="/tags/%E5%AE%9E%E6%95%B0%E8%BE%93%E5%87%BA/" rel="tag">实数输出</a>, <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>, <a class="tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag">蓝桥杯</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-01-16</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" 斐波那契数列" href="/2021/01/16/斐波那契数列/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" 闰年判断" href="/2021/01/16/闰年判断/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+    </article>
+</section>
         </div>
         
             <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
