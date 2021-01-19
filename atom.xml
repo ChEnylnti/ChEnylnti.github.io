@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ChEnylnti</title>
+  
+  <subtitle>好耶~</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-01-18T10:13:26.231Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>ChEnylnti</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>查找整数</title>
+    <link href="http://example.com/2021/01/18/%E6%9F%A5%E6%89%BE%E6%95%B4%E6%95%B0/"/>
+    <id>http://example.com/2021/01/18/%E6%9F%A5%E6%89%BE%E6%95%B4%E6%95%B0/</id>
+    <published>2021-01-18T08:55:52.549Z</published>
+    <updated>2021-01-18T10:13:26.231Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给出一个包含n个整数的数列，问整数a在数列中的第一次出现是第几个。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>第一行包含一个整数n。</p><p>第二行包含n个非负整数，为给定的数列，数列中的每个数都不大于10000。</p><p>第三行包含一个整数a，为待查找的数。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>如果a在数列中出现了，输出它第一次出现的位置(位置从1开始编号)，否则输出-1。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>6<br>1 9 4 8 3 9<br>9</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>2</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n &lt;= 1000。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> t=in.nextInt();</span><br><span class="line"><span class="keyword">int</span>[] num=<span class="keyword">new</span> <span class="keyword">int</span>[t];</span><br><span class="line"><span class="keyword">int</span> p=-<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++) &#123;</span><br><span class="line">num[i]=in.nextInt();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> a=in.nextInt();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++) &#123;</span><br><span class="line"><span class="keyword">if</span>(num[i]==a) &#123;</span><br><span class="line">p=i+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(p);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;给出一个包含n个整数的数列，问整数a在数列中的第一次出现是第几个。&lt;/p&gt;
+&lt;h2 id=&quot;资源限制：&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="多行输入" scheme="http://example.com/tags/%E5%A4%9A%E8%A1%8C%E8%BE%93%E5%85%A5/"/>
+    
+    <category term="判断" scheme="http://example.com/tags/%E5%88%A4%E6%96%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数列特征</title>
+    <link href="http://example.com/2021/01/18/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/"/>
+    <id>http://example.com/2021/01/18/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/</id>
+    <published>2021-01-18T08:12:48.225Z</published>
+    <updated>2021-01-18T08:30:49.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给出n个数，找出这n个数的最大值，最小值，和。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>第一行为整数n，表示数的个数。</p><p>第二行有n个数，为给定的n个数，每个数的绝对值都小于10000。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出三行，每行一个整数。第一行表示这些数中的最大值，第二行表示这些数中的最小值，第三行表示这些数的和。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>5<br>1 3 -2 4 5</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>5<br>-2<br>11</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n &lt;= 10000。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>第一次见这题，不是因为题目的逻辑有多难，而是不知道怎么实现多行输入并且逐个处理。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span>[] num = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"><span class="keyword">int</span> max=-<span class="number">2147483648</span>;</span><br><span class="line"><span class="keyword">int</span> min=<span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">num[i] = in.nextInt();</span><br><span class="line"><span class="keyword">if</span>(num[i]&gt;max) &#123;</span><br><span class="line">max=num[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(num[i]&lt;min) &#123;</span><br><span class="line">min=num[i];</span><br><span class="line">&#125;</span><br><span class="line">sum=num[i]+sum;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(max);</span><br><span class="line">System.out.println(min);</span><br><span class="line">System.out.println(sum);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;给出n个数，找出这n个数的最大值，最小值，和。&lt;/p&gt;
+&lt;h2 id=&quot;资源限制：&quot;&gt;&lt;a href=&quot;#资源限制：</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="最大值" scheme="http://example.com/tags/%E6%9C%80%E5%A4%A7%E5%80%BC/"/>
+    
+    <category term="最小值" scheme="http://example.com/tags/%E6%9C%80%E5%B0%8F%E5%80%BC/"/>
+    
+    <category term="累加" scheme="http://example.com/tags/%E7%B4%AF%E5%8A%A0/"/>
+    
+    <category term="多行输入" scheme="http://example.com/tags/%E5%A4%9A%E8%A1%8C%E8%BE%93%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字母图形</title>
+    <link href="http://example.com/2021/01/17/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/"/>
+    <id>http://example.com/2021/01/17/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/</id>
+    <published>2021-01-17T15:03:11.121Z</published>
+    <updated>2021-01-18T08:24:26.461Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>利用字母可以组成一些美丽的图形，下面给出了一个例子：</p><p>ABCDEFG</p><p>BABCDEF</p><p>CBABCDE</p><p>DCBABCD</p><p>EDCBABC</p><p>这是一个5行7列的图形，请找出这个图形的规律，并输出一个n行m列的图形。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入一行，包含两个整数n和m，分别表示你要输出的图形的行数的列数。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出n行，每个m个字符，为你的图形。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>5  7</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>ABCDEFG<br>BABCDEF<br>CBABCDE<br>DCBABCD<br>EDCBABC</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n, m &lt;= 26。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>这题就是一个找规律的题，先设一个char为65来表示A，接下来我们就可以通过对char的加减来实现字母的变化，我们再设一个外层循环来设定要打印的行数，然后这个外层循环内有两个内部循环，第一个内部循环是打印A之前的数的，比如第一行从A开始，这个内层循环就不需要打印，第二行A的前面有B，所以要输出B。第二个循环则是输出从A开始列数减第一个循环输出的个数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span> m=in.nextInt();</span><br><span class="line"><span class="keyword">char</span> A=<span class="number">65</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">0</span>;c&lt;n;c++) &#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> h1=c,w=<span class="number">0</span>;w&lt;c&amp;&amp;w&lt;m;h1--,w++) &#123;</span><br><span class="line">System.out.print((<span class="keyword">char</span>)(A+h1));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> h=<span class="number">0</span>;h&lt;m-c;h++) &#123; </span><br><span class="line">System.out.print((<span class="keyword">char</span>)(A+h));</span><br><span class="line">&#125;</span><br><span class="line">System.out.println();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>因为第一层循环的偏移量和列数的循环是相等的，也就是说输出第零行的时候偏移量也是零不用输出，当然也不能大于列数。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;利用字母可以组成一些美丽的图形，下面给出了一个例子：&lt;/p&gt;
+&lt;p&gt;ABCDEFG&lt;/p&gt;
+&lt;p&gt;BABCDEF&lt;/</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="字符串" scheme="http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01字串</title>
+    <link href="http://example.com/2021/01/16/01%E5%AD%97%E4%B8%B2/"/>
+    <id>http://example.com/2021/01/16/01%E5%AD%97%E4%B8%B2/</id>
+    <published>2021-01-16T15:56:06.135Z</published>
+    <updated>2021-01-17T14:53:55.077Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>对于长度为5位的一个01串，每一位都可能是0或1，一共有32种可能。它们的前几个是：</p><p>00000</p><p>00001</p><p>00010</p><p>00011</p><p>00100</p><p>请按从小到大的顺序输出这32种01串。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>本题没有输入格式</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出32行，按从小到大的顺序每行一个长度为5的01串。</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>00000<br>00001<br>00010<br>00011<br>&lt;以下部分省略&gt;</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>这题只需要从0循环31次，再将他们的二进制输出即可</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++) &#123;</span><br><span class="line">binaryToDecimal(i);</span><br><span class="line">System.out.println();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binaryToDecimal</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">4</span>;i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">          System.out.print(n &gt;&gt;&gt; i &amp; <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个方法转化为二进制能选择保留的位数，原理是依次将最高位左移到最低位，再与1&amp;运算。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;对于长度为5位的一个01串，每一位都可能是0或1，一共有32种可能。它们的前几个是：&lt;/p&gt;
+&lt;p&gt;00000&lt;/p</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闰年判断</title>
+    <link href="http://example.com/2021/01/16/%E9%97%B0%E5%B9%B4%E5%88%A4%E6%96%AD/"/>
+    <id>http://example.com/2021/01/16/%E9%97%B0%E5%B9%B4%E5%88%A4%E6%96%AD/</id>
+    <published>2021-01-16T15:47:50.667Z</published>
+    <updated>2021-01-16T15:47:50.667Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>给定一个年份，判断这一年是不是闰年。</p><p>当以下情况之一满足时，这一年是闰年：</p><p>\1. 年份是4的倍数而不是100的倍数；</p><p>\2. 年份是400的倍数。</p><p>其他的年份都不是闰年。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入包含一个整数y，表示当前的年份。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出一行，如果给定的年份是闰年，则输出yes，否则输出no。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>2013</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>no</p><h2 id="样例输入：-1"><a href="#样例输入：-1" class="headerlink" title="样例输入："></a>样例输入：</h2><p>2016</p><h2 id="样例输出：-1"><a href="#样例输出：-1" class="headerlink" title="样例输出："></a>样例输出：</h2><p>yes</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1990 &lt;= y &lt;= 2050。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>只要判断x除以y是否为0，就可以知道x能不能被y整除了。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> y=in.nextInt();</span><br><span class="line"><span class="keyword">if</span>((y%<span class="number">4</span>==<span class="number">0</span>&amp;&amp;y%<span class="number">100</span>!=<span class="number">0</span>)||y%<span class="number">400</span>==<span class="number">0</span>) &#123;</span><br><span class="line">System.out.println(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;no&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;给定一个年份，判断这一年是不是闰年。&lt;/p&gt;
+&lt;p&gt;当以下情况之一满足时，这一年是闰年：&lt;/p&gt;
+&lt;p&gt;\1. 年份</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="条件判断" scheme="http://example.com/tags/%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>圆的面积</title>
+    <link href="http://example.com/2021/01/16/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/"/>
+    <id>http://example.com/2021/01/16/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/</id>
+    <published>2021-01-16T14:31:20.256Z</published>
+    <updated>2021-01-16T14:53:37.914Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给定圆的半径r，求圆的面积。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入包含一个整数r，表示圆的半径。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>4</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>50.2654825</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1&lt;=r&lt;=10000</p><h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><p>本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比如PI=3.14159265358979323，也可以使用数学公式来求π，比如PI=atan(1.0)*4。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>java中保留n为小数的写法为（不唯一）</p><p>String.format(“%.nf”, x)</p><p>n为保留的小数位，x必须为double类型。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">double</span> r=in.nextDouble();</span><br><span class="line"><span class="keyword">double</span> s=<span class="number">3.14159265358979323</span>*r*r;</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%.7f&quot;</span>, s));</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;给定圆的半径r，求圆的面积。&lt;/p&gt;
+&lt;h2 id=&quot;资源限制：&quot;&gt;&lt;a href=&quot;#资源限制：&quot; class=&quot;</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="入门训练" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%85%A5%E9%97%A8%E8%AE%AD%E7%BB%83/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="实数输出" scheme="http://example.com/tags/%E5%AE%9E%E6%95%B0%E8%BE%93%E5%87%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>斐波那契数列</title>
+    <link href="http://example.com/2021/01/16/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
+    <id>http://example.com/2021/01/16/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</id>
+    <published>2021-01-16T08:31:44.634Z</published>
+    <updated>2021-01-17T07:36:31.594Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>Fibonacci数列的递推公式为：F<sub>n=F<sub>n-1+F<sub>n-2，其中F<sub>1=F<sub>2=1。</p><p>当n比较大时，F<sub>n也非常大，现在我们想知道，F<sub>n除以10007的余数是多少。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入包含一个整数n。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出一行，包含一个整数，表示Fn除以10007的余数。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>10</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>55</p><h2 id="样例输入：-1"><a href="#样例输入：-1" class="headerlink" title="样例输入："></a>样例输入：</h2><p>22</p><h2 id="样例输出：-1"><a href="#样例输出：-1" class="headerlink" title="样例输出："></a>样例输出：</h2><p>7704</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1&lt;=n&lt;=1000000.</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>定义一个数组长度为n的数组，把数组的第一位和第二位都设为1，再通过循环使数组从第三位开始的后一位等于前两位的合。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fibonacci</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">arr[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(n&gt;<span class="number">1</span>) &#123;</span><br><span class="line">arr[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line">arr[i]=arr[i-<span class="number">1</span>]%<span class="number">10007</span>+arr[i-<span class="number">2</span>]%<span class="number">10007</span>;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(arr[n-<span class="number">1</span>]%<span class="number">10007</span>);</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>第二种方法用的是递归，从最上层递归下来，但是一旦运算的数字变大，递归算法的重复运算太多，因为算f(n-1)的时候要算f(n-3)，算f(n-2)的时候还要算f(n-3)，不符合题目的资源要求。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fibonacci1</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line">System.out.println(fbnc(n)%<span class="number">10007</span>);</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fbnc</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span>|n==<span class="number">2</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> fbnc(n-<span class="number">1</span>)%<span class="number">10007</span>+fbnc(n-<span class="number">2</span>)%<span class="number">10007</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h2><p>通过循环加交换变量的值就能得出</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fibonacci2</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> start=System.currentTimeMillis();</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line">System.out.println(fbnc(n)%<span class="number">10007</span>);</span><br><span class="line"><span class="keyword">long</span> end=System.currentTimeMillis(); <span class="comment">//获取结束时间</span></span><br><span class="line">System.out.println(<span class="string">&quot;程序运行时间： &quot;</span>+(end-start)/<span class="number">1000</span>+<span class="string">&quot;s&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fbnc</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span>[] result= &#123;<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">if</span>(n&lt;=<span class="number">2</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> result[n-<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> first =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> second=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> fbnc=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;n;i++) &#123;</span><br><span class="line">fbnc =first+second;</span><br><span class="line">first=second%<span class="number">10007</span>;</span><br><span class="line">second=fbnc%<span class="number">10007</span>;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="keyword">return</span> fbnc;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;Fibonacci数列的递推公式为：F&lt;sub&gt;n=F&lt;sub&gt;n-1+F&lt;sub&gt;n-2，其中F&lt;sub&gt;1=F&lt;</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="入门训练" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%85%A5%E9%97%A8%E8%AE%AD%E7%BB%83/"/>
+    
+    
+    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="数列" scheme="http://example.com/tags/%E6%95%B0%E5%88%97/"/>
+    
+    <category term="取模" scheme="http://example.com/tags/%E5%8F%96%E6%A8%A1/"/>
+    
+    <category term="递归" scheme="http://example.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一题三解：计算二进制中1的个数</title>
+    <link href="http://example.com/2021/01/15/%E4%B8%80%E9%A2%98%E4%B8%89%E8%A7%A3%EF%BC%9A%E8%AE%A1%E7%AE%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/"/>
+    <id>http://example.com/2021/01/15/%E4%B8%80%E9%A2%98%E4%B8%89%E8%A7%A3%EF%BC%9A%E8%AE%A1%E7%AE%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/</id>
+    <published>2021-01-15T09:26:28.679Z</published>
+    <updated>2021-01-15T09:24:03.180Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>请实现一个函数，输入一个整数，输出该二进制表示中1的个数</p><p><strong>例</strong>：9的二进制表示为1001，有2位是1</p><h1 id="方案一："><a href="#方案一：" class="headerlink" title="方案一："></a>方案一：</h1><p>第一种方法：假设这个数是3，其二进制为011，首先将011&amp;001，判断得出来的结果是否等于001，如果等于，说明这个第1位是1；然后将 011&amp;010，判断得出来的结果是否等于010，如果等于，说明这个第2位是1，一直进行下去，判断31位</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=cin.nextInt();</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++) &#123;</span><br><span class="line"><span class="keyword">if</span>(((i&lt;&lt;i)&amp;n)==(i&lt;&lt;i)) &#123;</span><br><span class="line">cnt++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(cnt);</span><br></pre></td></tr></table></figure><h1 id="方案二："><a href="#方案二：" class="headerlink" title="方案二："></a>方案二：</h1><p>第二种方法：只让要测验的数向右移。假设这个数是3，其二进制为011，首先将011&amp;001，判断得出来的结果是否等于001，如果等于，说明这个 第1位是1；然后将001&amp;001，判断得出来的结果是否等于001，如果等于，说明这个第2位是1，一直进行下去，判断31位</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=cin.nextInt();</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//方案二</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++) &#123;</span><br><span class="line"><span class="keyword">if</span>(((n&gt;&gt;&gt;i)&amp;<span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">cnt++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(cnt);</span><br></pre></td></tr></table></figure><h1 id="方案三："><a href="#方案三：" class="headerlink" title="方案三："></a>方案三：</h1><p>第三种方法：还是假设这个数是3，那我们让3变成0的过程中肯定是要消掉1的，消掉多少次1，就表示3的二进制中有多少个1。关键就在于，如何 消掉011中的1，我们首先让011减1，那么011就变成了010，然后让011&amp;010，就得到了010，然后再让010减1，那么010就变成了001，然后让 010&amp;001，就得到了000，转换成伪代码的形式就是，a = (a - 1) &amp; a，它的效果就是消掉最低位上的1，依次消掉所有最低位上的1，最后不就变成了0吗</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=cin.nextInt();</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//方案三</span></span><br><span class="line"><span class="keyword">while</span>(n != <span class="number">0</span>) &#123;</span><br><span class="line">n = (n-<span class="number">1</span>)&amp;n;</span><br><span class="line">cnt++;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(cnt);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;请实现一个函数，输入一个整数，输出该二进制表示中1的个数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;：9的二</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="位运算的奇巧淫技" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>题解：如何找数组中唯一成对的那个数</title>
+    <link href="http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/"/>
+    <id>http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/</id>
+    <published>2021-01-15T08:13:35.166Z</published>
+    <updated>2021-01-15T08:10:24.114Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>根据a^a=0,a^0=a这两条性质，我们可以把数组中的元素全部异或起来，然后再异或一遍不重复的所有元素，就是(1^2^3^4^2)^(1^2^3^4)，这样把它们凑起来，最后结果就应该是2^2^2=2^0=2，正好是要找的重复元素</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=<span class="number">1001</span>,sum1 =<span class="number">0</span>,sum2=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>[] arr =<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-<span class="number">1</span>;i++) &#123;</span><br><span class="line">arr[i]=i+<span class="number">1</span>;</span><br><span class="line">sum1 ^=arr[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line">arr[n-<span class="number">1</span>]=<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选重复的数</span></span><br><span class="line">sum2 =sum1^arr[n-<span class="number">1</span>];<span class="comment">//sum2为sum1除去重复的数</span></span><br><span class="line"><span class="keyword">int</span> idx =<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选取一个数作为随机数的下标</span></span><br><span class="line">&#123;<span class="comment">//交换</span></span><br><span class="line"><span class="keyword">int</span> t=arr[idx];</span><br><span class="line">arr[idx]=arr[n-<span class="number">1</span>];</span><br><span class="line">arr[n-<span class="number">1</span>] = t;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum1^sum2);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="位运算的奇巧淫技" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回文字符串的判断</title>
+    <link href="http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/"/>
+    <id>http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/</id>
+    <published>2021-01-14T15:51:35.156Z</published>
+    <updated>2021-01-15T06:35:44.503Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>概念</strong>：</p><p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。</p><p><strong>分析</strong>：</p><p>设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回文数判断</span></span><br><span class="line">System.out.println(<span class="string">&quot;请输入一个字符串:&quot;</span>);</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String str =in.nextLine();</span><br><span class="line"><span class="keyword">boolean</span> isPalindrome=<span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">int</span> begin=<span class="number">0</span>,end =str.length()-<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(begin&lt;end &amp;&amp;str.charAt(begin)==str.charAt(end)) &#123;</span><br><span class="line">begin++;</span><br><span class="line">end--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(begin &gt;=end) &#123;  <span class="comment">//奇数情况下若是回文数begin会等于end，偶数情况下begin会大于end</span></span><br><span class="line">isPalindrome =<span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(str+(isPalindrome?<span class="string">&quot;&quot;</span>:<span class="string">&quot;不&quot;</span>)+<span class="string">&quot;是一个回文字符串&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分析&lt;/str</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="算法基础" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>找出距离最小的点对</title>
+    <link href="http://example.com/2021/01/14/%E6%89%BE%E5%87%BA%E8%B7%9D%E7%A6%BB%E6%9C%80%E5%B0%8F%E7%9A%84%E7%82%B9%E5%AF%B9/"/>
+    <id>http://example.com/2021/01/14/%E6%89%BE%E5%87%BA%E8%B7%9D%E7%A6%BB%E6%9C%80%E5%B0%8F%E7%9A%84%E7%82%B9%E5%AF%B9/</id>
+    <published>2021-01-14T13:41:10.443Z</published>
+    <updated>2021-01-14T16:28:13.521Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/%E6%89%BE%E5%87%BA%E8%B7%9D%E7%A6%BB%E6%9C%80%E5%B0%8F%E7%9A%84%E7%82%B9%E5%AF%B9/image-20210114214335565.png" alt="image-20210114214335565"></p><p><strong>分析</strong>：</p><p>依次把每个点作为起点，计算和其余点的距离，保留更小的距离</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>[][] arr = &#123;</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">0.5</span>&#125;,</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,</span><br><span class="line">&#123;<span class="number">2.2</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">7</span>&#125;,</span><br><span class="line">&#123;<span class="number">4</span>,<span class="number">1.8</span>&#125;,</span><br><span class="line">&#123;<span class="number">1.1</span>,<span class="number">9</span>&#125;,</span><br><span class="line">&#123;<span class="number">3</span>,<span class="number">5</span>&#125;,</span><br><span class="line">&#123;<span class="number">5</span>,<span class="number">6</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">double</span> minDis = Double.MAX_VALUE;</span><br><span class="line"><span class="keyword">int</span> minI=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> minJ=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//依次把每个点作为起点</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line"><span class="comment">//计算和其余点的距离</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;arr.length;j++) &#123;</span><br><span class="line"><span class="keyword">double</span> x1 =arr[i][<span class="number">0</span>];</span><br><span class="line"><span class="keyword">double</span> x2=arr[j][<span class="number">0</span>];</span><br><span class="line"><span class="keyword">double</span> y1 =arr[i][<span class="number">1</span>];</span><br><span class="line"><span class="keyword">double</span> y2=arr[j][<span class="number">1</span>];</span><br><span class="line"><span class="keyword">double</span> dis=Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));<span class="comment">//勾股定理</span></span><br><span class="line"><span class="keyword">if</span>(dis&lt;minDis) &#123;</span><br><span class="line">minDis=dis;</span><br><span class="line">minI=i;</span><br><span class="line">minJ=j;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;最小距离的点为：（&quot;</span>+arr[minI][<span class="number">0</span>]+<span class="string">&quot;,&quot;</span>+arr[minI][<span class="number">1</span>]+<span class="string">&quot;)(&quot;</span>+arr[minJ][<span class="number">0</span>]+<span class="string">&quot;,&quot;</span>+arr[minJ][<span class="number">1</span>]+<span class="string">&quot;距离为：&quot;</span>+minDis);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/%E6%89%BE%E5%87%BA%E8%B7%9D%E7%A6%BB%E6%9C%80%E5%B0%8F%E7%9A%84%E7%82%B9%E5%AF%B9/image-20210114214335565.png&quot; alt=&quot;ima</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="算法基础" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10进制数转16进制</title>
+    <link href="http://example.com/2021/01/12/10%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC16%E8%BF%9B%E5%88%B6/"/>
+    <id>http://example.com/2021/01/12/10%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC16%E8%BF%9B%E5%88%B6/</id>
+    <published>2021-01-12T06:53:17.983Z</published>
+    <updated>2021-01-13T07:50:39.417Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>已知</strong>：十进制数123被转换为十六进制数7B。这个转换过程如下：将123除以16，余数为11（十六进制的B）商为7.继续将7除以16，余数为7，商为0.因此7B就是123的十六进制数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//10进制数转16进制</span></span><br><span class="line">System.out.println(<span class="string">&quot;请输入一个整数：&quot;</span>);</span><br><span class="line">Scanner in  =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> number =in.nextInt();</span><br><span class="line">String hex =<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> shang =number;</span><br><span class="line"><span class="keyword">int</span> yu;</span><br><span class="line"><span class="keyword">while</span>(shang !=<span class="number">0</span>) &#123;</span><br><span class="line">yu =shang % <span class="number">16</span>;<span class="comment">//除16取余</span></span><br><span class="line">shang=shang/<span class="number">16</span>;<span class="comment">//除16取商</span></span><br><span class="line"><span class="keyword">char</span> result;</span><br><span class="line"><span class="keyword">if</span>(yu&gt;<span class="number">9</span>) &#123;</span><br><span class="line">result=(<span class="keyword">char</span>)(<span class="string">&#x27;A&#x27;</span>+(yu-<span class="number">10</span>));</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">result =(<span class="keyword">char</span>)(<span class="string">&#x27;0&#x27;</span>+(yu-<span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line">hex=result +hex;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(number+<span class="string">&quot;的十六进制是：&quot;</span>+hex);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;已知&lt;/strong&gt;：十进制数123被转换为十六进制数7B。这个转换过程如下：将123除以16，余数为11（十六进制的B）商为7.继续将7除以16，余数为7，商为0.因此7B就是123的十六进制数。&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="算法基础" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="进制转换" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="进制转换" scheme="http://example.com/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>位运算</title>
+    <link href="http://example.com/2021/01/11/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    <id>http://example.com/2021/01/11/%E4%BD%8D%E8%BF%90%E7%AE%97/</id>
+    <published>2021-01-11T10:03:21.130Z</published>
+    <updated>2021-01-12T13:12:31.302Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="1-位运算概述"><a href="#1-位运算概述" class="headerlink" title="1.位运算概述"></a>1.位运算概述</h2><blockquote><p>程序中的所有数在计算机内存中都是以二进制的形式<a href="https://baike.baidu.com/item/%E5%82%A8%E5%AD%98/2446499">储存</a>的。位运算就是直接对整数在内存中的二进制位进行<a href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C/33052">操作</a>。比如，and运算本来是一个逻辑<a href="https://baike.baidu.com/item/%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</a>，但整数与整数之间也可以进行and运算。举个例子，6的二进制是110，11的二进制是1011，那么6 and 11的结果就是2，它是二进制对应位进行逻辑运算的结果（0表示False，1表示True，空位都当0处理）。 </p></blockquote><blockquote><p>110</p></blockquote><blockquote><p>AND 1011</p></blockquote><blockquote><hr></blockquote><blockquote><p>0010 –&gt; 2</p></blockquote><p>——引用自<a href="https://baike.baidu.com/item/%E4%BD%8D%E8%BF%90%E7%AE%97/6888804?fr=aladdin">百度</a></p><h2 id="2-位运算运算符"><a href="#2-位运算运算符" class="headerlink" title="2.位运算运算符"></a>2.位运算运算符</h2><h3 id="与运算-amp"><a href="#与运算-amp" class="headerlink" title="与运算(&amp;)"></a>与运算(&amp;)</h3><p>把参加运算的数转化为二进制(不足的位补0)，按二进制位做逻辑上的与运算，1为true，0为false。</p><p>0&amp;0=0  0&amp;1=0  1&amp;0=0  1&amp;1=1</p><h3 id="或运算"><a href="#或运算" class="headerlink" title="或运算(|)"></a>或运算(|)</h3><p>把参加运算的数转化为二进制(不足的位补0)，按二进制位做逻辑上的或运算，1为true，0为false。</p><p>0|0=0  0|1=1  1|0=1  1|1=1</p><h3 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算(^)"></a>异或运算(^)</h3><p>首先异或操作是对每一位都进行异或（相同为0，不同为1），但需要先把数转换成补码才行。</p><p>1、正数的补码即本身</p><p>2、负数的补码为各位取反然后加1（最高为保持为1不变）</p><p>把参加运算的数转化为二进制(不足的位补0)，两个数相同为0，相异为1。</p><p>0^0=0  0^1=1  1^0=1  1^1=0</p><p>异或的几条性质:</p><p>1、交换律</p><p>2、结合律 (a^b)^c == a^(b^c)</p><p>3、对于任何数x，都有 x^x=0，x^0=x</p><p>4、自反性: a^b^b=a^0=a;</p><h3 id="取反运算"><a href="#取反运算" class="headerlink" title="取反运算(~)"></a>取反运算(~)</h3><p>把参加运算的数转化为二进制(不足的位补0)，做逻辑上的取反。</p><p>~1=0  ~0=1</p><h3 id="左移运算-lt-lt"><a href="#左移运算-lt-lt" class="headerlink" title="左移运算(&lt;&lt;)"></a>左移运算(&lt;&lt;)</h3><p>把参加运算的数转化为二进制(不足的位补0)，左移若干位 (左边不要，右边补0)。</p><p>1010 &lt;&lt; 2 就是左移两位得到 1000</p><p>若左移时舍弃的高位补包含1，则每左移一位，相当于该数乘以2。</p><p>对于int型，1&lt;&lt;35与1&lt;&lt;3是相同的，因为int总共就32位，向左边移35位的时候会取模。</p><h3 id="右移运算-gt-gt"><a href="#右移运算-gt-gt" class="headerlink" title="右移运算(&gt;&gt;)"></a>右移运算(&gt;&gt;)</h3><p>把参加运算的数转化为二进制(不足的位补0)，右移若干位 (正数左边补0，负数左边补1，右边不要)。</p><p>操作数右移一位，就相当于概述除以2。</p><h3 id="右移运算-gt-gt-gt"><a href="#右移运算-gt-gt-gt" class="headerlink" title="右移运算(&gt;&gt;&gt;)"></a>右移运算(&gt;&gt;&gt;)</h3><p>把参加运算的数转化为二进制(不足的位补0)，右移若干位 (左边补0，右边不要)。</p><h3 id="没有-lt-lt-lt-运算符"><a href="#没有-lt-lt-lt-运算符" class="headerlink" title="没有&lt;&lt;&lt;运算符"></a>没有&lt;&lt;&lt;运算符</h3><h2 id="3-例题"><a href="#3-例题" class="headerlink" title="3.例题"></a>3.例题</h2><h3 id="把2变成8最高效的方式是什么"><a href="#把2变成8最高效的方式是什么" class="headerlink" title="把2变成8最高效的方式是什么"></a>把2变成8最高效的方式是什么</h3><p>2 &lt;&lt; 2=8</p><h3 id="判断奇偶数"><a href="#判断奇偶数" class="headerlink" title="判断奇偶数"></a>判断奇偶数</h3><p>二进制数的最后以为是1就是奇数，最后一位是0就是偶数，因为前面都是二的次方所以一定是偶数，所以只要判断最后一位就行了。</p><p>让被判断的数的最后的一位和1做与运算，结果为0就是偶数，为1就是奇数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断奇偶数</span></span><br><span class="line"><span class="keyword">int</span> num=<span class="number">99</span>;</span><br><span class="line">System.out.println(num+<span class="string">&quot;是：&quot;</span>+(((num&amp;<span class="number">1</span>)==<span class="number">0</span>)?<span class="string">&quot;偶数&quot;</span>:<span class="string">&quot;奇数&quot;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="获取二进制位是1还是0-两种解决方案"><a href="#获取二进制位是1还是0-两种解决方案" class="headerlink" title="获取二进制位是1还是0(两种解决方案)"></a>获取二进制位是1还是0(两种解决方案)</h3><p><strong>方案一</strong></p><p>求x的第5位</p><p>先让1左移4位得00010000，与x进行与运算，得到的结果再右移4位判断得到的是1还是0。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取二进制位是1还是0(两种解决方案)</span></span><br><span class="line"><span class="comment">//方案一</span></span><br><span class="line">System.out.println(num +<span class="string">&quot;的第5位上的二进制数是：&quot;</span>+(((num&amp;(<span class="number">1</span>&lt;&lt;<span class="number">4</span>))&gt;&gt;<span class="number">4</span>)== <span class="number">0</span>?<span class="string">&quot;0&quot;</span>:<span class="string">&quot;1&quot;</span>));</span><br></pre></td></tr></table></figure><p><strong>方案二</strong></p><p>将x右移4位与1进行与运算</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方案二</span></span><br><span class="line">System.out.println(num +<span class="string">&quot;的第5位上的二进制数是：&quot;</span>+(((num&gt;&gt;<span class="number">4</span>)&amp;<span class="number">1</span>)==<span class="number">0</span>?<span class="string">&quot;0&quot;</span>:<span class="string">&quot;1&quot;</span>) );</span><br></pre></td></tr></table></figure><h3 id="交换两个整数变量的值"><a href="#交换两个整数变量的值" class="headerlink" title="交换两个整数变量的值"></a>交换两个整数变量的值</h3><p>A=A^B</p><p>B=A^B</p><p>C=A^B</p><h3 id="不用判断语句，求整数的绝对值"><a href="#不用判断语句，求整数的绝对值" class="headerlink" title="不用判断语句，求整数的绝对值"></a>不用判断语句，求整数的绝对值</h3><p>负数的补码为各位取反然后加1(最高位保持为1不变)</p><p>先把要求的数设为A带符号往右移31位设为x，若A为正数那x就0，为负数则为-1(111111..第一个1表符号)，将A和x做异或运算，若A为正数那么运算结果就是自己，若A为负数结果则为~A(取反)，因为取反后还要加一，通过A&gt;&gt;&gt;31(结果为0或1)来决定要不要加一。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不用判断语句，求整数的绝对值</span></span><br><span class="line"><span class="keyword">int</span> num1=-<span class="number">20</span>;</span><br><span class="line">System.out.println(num1+<span class="string">&quot;的绝对值是&quot;</span>+((num1^(num1 &gt;&gt; <span class="number">31</span>))+(num1 &gt;&gt;&gt; <span class="number">31</span>)));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;位运算&quot;&gt;&lt;a href=&quot;#位运算&quot; class=&quot;headerlink&quot; title=&quot;位运算&quot;&gt;&lt;/a&gt;位运算&lt;/h1&gt;&lt;h2 id=&quot;1-位运算概述&quot;&gt;&lt;a href=&quot;#1-位运算概述&quot; class=&quot;headerlink&quot; title=&quot;1.位运算概述</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="算法基础" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="位运算" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2021/01/08/hello-world/"/>
+    <id>http://example.com/2021/01/08/hello-world/</id>
+    <published>2021-01-08T10:52:08.837Z</published>
+    <updated>2021-01-09T10:33:02.281Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    <category term="意义不明" scheme="http://example.com/categories/%E6%84%8F%E4%B9%89%E4%B8%8D%E6%98%8E/"/>
+    
+    
+    <category term="-意义不明" scheme="http://example.com/tags/%E6%84%8F%E4%B9%89%E4%B8%8D%E6%98%8E/"/>
+    
+  </entry>
+  
+</feed>
