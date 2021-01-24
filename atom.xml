@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-23T13:54:19.471Z</updated>
+  <updated>2021-01-24T08:33:54.242Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>完美的代价</title>
+    <link href="http://example.com/2021/01/24/%E5%AE%8C%E7%BE%8E%E7%9A%84%E4%BB%A3%E4%BB%B7/"/>
+    <id>http://example.com/2021/01/24/%E5%AE%8C%E7%BE%8E%E7%9A%84%E4%BB%A3%E4%BB%B7/</id>
+    <published>2021-01-24T08:33:54.242Z</published>
+    <updated>2021-01-24T08:33:54.242Z</updated>
+    
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矩形面积交</title>
+    <link href="http://example.com/2021/01/23/%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E4%BA%A4/"/>
+    <id>http://example.com/2021/01/23/%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E4%BA%A4/</id>
+    <published>2021-01-23T13:41:31.770Z</published>
+    <updated>2021-01-24T08:35:17.953Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>平面上有两个矩形，它们的边平行于直角坐标系的X轴或Y轴。对于每个矩形，我们给出它的一对相对顶点的坐标，请你编程算出两个矩形的交的面积。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：512.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入仅包含两行，每行描述一个矩形。<br>在每行中，给出矩形的一对相对顶点的坐标，每个点的坐标都用两个绝对值不超过10^7的实数表示。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出仅包含一个实数，为交的面积，保留到小数后两位。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>1 1 3 3<br>2 2 4 4</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>1.00</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>本题的意思是打出两个矩形的对角顶点坐标，通过顶点坐标来确定一个矩形，如图</p><p><img src="/images/%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E4%BA%A4/image-20210124104906752.png" alt="image-20210124104906752"></p><p>由图可得知顶点bc组成的矩形的面积是所求的面积，可以看出b点是两个下顶点中较大的一个，c点是较小的一个，但情况不止这一种，如下图</p><p><img src="/images/%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E4%BA%A4/image-20210124105640383.png" alt="image-20210124105640383"></p><p>由此图得知，点b不是两个下顶点中的任意一个，而是由两个下顶点中较大的横坐标和较大的纵坐标组成的，点c同理，故我们只要再设一个数组来储存符合要求的坐标即可。</p><p>但是，除了相交的情况还有不相交的情况，</p><p><img src="/images/%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E4%BA%A4/image-20210124110102913.png" alt="image-20210124110102913"></p><p>则还需要几个if来判断。</p><p>以上都是在输入为下顶点加上顶点的情况下成立的，所以我们还要设置一个方法来判断是否输入的是下顶点加上顶点的格式，若不是则交换位置。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.DecimalFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">double</span>[][] arr=<span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">2</span>][<span class="number">4</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)&#123;</span><br><span class="line">                arr[i][j]=in.nextDouble();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span>[] arr1=arr[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">double</span>[] arr2=arr[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">double</span>[] result=<span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">4</span>];</span><br><span class="line">        arr1=format(arr1,<span class="number">0</span>);</span><br><span class="line">        arr1=format(arr1,<span class="number">1</span>);</span><br><span class="line">        arr2=format(arr2,<span class="number">0</span>);</span><br><span class="line">        arr2=format(arr2,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (arr1[<span class="number">2</span>]&lt;=arr2[<span class="number">0</span>]||arr1[<span class="number">3</span>]&lt;=arr2[<span class="number">1</span>]||arr2[<span class="number">2</span>]&lt;=arr1[<span class="number">0</span>]||arr2[<span class="number">3</span>]&lt;=arr1[<span class="number">1</span>])&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;0.00&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        result[<span class="number">0</span>]=Max(arr1[<span class="number">0</span>],arr2[<span class="number">0</span>]);</span><br><span class="line">        result[<span class="number">1</span>]=Max(arr1[<span class="number">1</span>],arr2[<span class="number">1</span>]);</span><br><span class="line">        result[<span class="number">2</span>]=Min(arr1[<span class="number">2</span>],arr2[<span class="number">2</span>]);</span><br><span class="line">        result[<span class="number">3</span>]=Min(arr1[<span class="number">3</span>],arr2[<span class="number">3</span>]);</span><br><span class="line">        <span class="keyword">double</span> s=(result[<span class="number">2</span>]-result[<span class="number">0</span>])*(result[<span class="number">3</span>]-result[<span class="number">1</span>]);</span><br><span class="line">        String str=<span class="keyword">new</span> DecimalFormat(<span class="string">&quot;0.00&quot;</span>).format(s);</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>[] format(<span class="keyword">double</span> arr[],<span class="keyword">int</span> i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i]&gt;arr[i+<span class="number">2</span>])&#123;</span><br><span class="line">            <span class="keyword">double</span> t=arr[i];</span><br><span class="line">            arr[i]=arr[i+<span class="number">2</span>];</span><br><span class="line">            arr[i+<span class="number">2</span>]=t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">Max</span><span class="params">(<span class="keyword">double</span> d1,<span class="keyword">double</span> d2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> d1&gt;d2 ? d1:d2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">Min</span><span class="params">(<span class="keyword">double</span> d1,<span class="keyword">double</span> d2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> d1&lt;d2 ? d1:d2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;平面上有两个矩形，它们的边平行于直角坐标系的X轴或Y轴。对于每个矩形，我们给出它的一对相对顶点的坐标，请你编程算出两</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="判断" scheme="http://example.com/tags/%E5%88%A4%E6%96%AD/"/>
+    
+    <category term="线段交" scheme="http://example.com/tags/%E7%BA%BF%E6%AE%B5%E4%BA%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>矩阵乘法</title>
@@ -793,78 +868,6 @@
     <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
     <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解：如何找数组中唯一成对的那个数</title>
-    <link href="http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/"/>
-    <id>http://example.com/2021/01/15/%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%94%AF%E4%B8%80%E6%88%90%E5%AF%B9%E7%9A%84%E9%82%A3%E4%B8%AA%E6%95%B0/</id>
-    <published>2021-01-15T08:13:35.166Z</published>
-    <updated>2021-01-15T08:10:24.114Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只能访问一次，设计一个算法，将它找出来；不用辅助储存空间，能否设计一个算法实现？</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>根据a^a=0,a^0=a这两条性质，我们可以把数组中的元素全部异或起来，然后再异或一遍不重复的所有元素，就是(1^2^3^4^2)^(1^2^3^4)，这样把它们凑起来，最后结果就应该是2^2^2=2^0=2，正好是要找的重复元素</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Scanner cin =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=<span class="number">1001</span>,sum1 =<span class="number">0</span>,sum2=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>[] arr =<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-<span class="number">1</span>;i++) &#123;</span><br><span class="line">arr[i]=i+<span class="number">1</span>;</span><br><span class="line">sum1 ^=arr[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line">arr[n-<span class="number">1</span>]=<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选重复的数</span></span><br><span class="line">sum2 =sum1^arr[n-<span class="number">1</span>];<span class="comment">//sum2为sum1除去重复的数</span></span><br><span class="line"><span class="keyword">int</span> idx =<span class="keyword">new</span> Random().nextInt(n);<span class="comment">//随机选取一个数作为随机数的下标</span></span><br><span class="line">&#123;<span class="comment">//交换</span></span><br><span class="line"><span class="keyword">int</span> t=arr[idx];</span><br><span class="line">arr[idx]=arr[n-<span class="number">1</span>];</span><br><span class="line">arr[n-<span class="number">1</span>] = t;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum1^sum2);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;1-1000这1000个数放在含有1001个元素的数组中，只有唯一的一个元素值重复，其他均只出现一次。每个数组元素只</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="位运算的奇巧淫技" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/"/>
-    
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回文字符串的判断</title>
-    <link href="http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/"/>
-    <id>http://example.com/2021/01/14/%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A4%E6%96%AD/</id>
-    <published>2021-01-14T15:51:35.156Z</published>
-    <updated>2021-01-15T06:35:44.503Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>概念</strong>：</p><p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。</p><p><strong>分析</strong>：</p><p>设置两个指针，一个从第一个开始，一个从后面开始，循环比较两个指针指向的字符是否相等</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回文数判断</span></span><br><span class="line">System.out.println(<span class="string">&quot;请输入一个字符串:&quot;</span>);</span><br><span class="line">Scanner in =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String str =in.nextLine();</span><br><span class="line"><span class="keyword">boolean</span> isPalindrome=<span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">int</span> begin=<span class="number">0</span>,end =str.length()-<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(begin&lt;end &amp;&amp;str.charAt(begin)==str.charAt(end)) &#123;</span><br><span class="line">begin++;</span><br><span class="line">end--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(begin &gt;=end) &#123;  <span class="comment">//奇数情况下若是回文数begin会等于end，偶数情况下begin会大于end</span></span><br><span class="line">isPalindrome =<span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(str+(isPalindrome?<span class="string">&quot;&quot;</span>:<span class="string">&quot;不&quot;</span>)+<span class="string">&quot;是一个回文字符串&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;分析&lt;/str</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="算法基础" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
   </entry>
   
