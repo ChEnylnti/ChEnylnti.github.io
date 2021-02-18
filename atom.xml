@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-16T08:28:29.400Z</updated>
+  <updated>2021-02-18T14:16:02.935Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>旋转数组的最小数字(改造二分法)</title>
+    <link href="http://example.com/2021/02/18/%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97(%E6%94%B9%E9%80%A0%E4%BA%8C%E5%88%86%E6%B3%95)/"/>
+    <id>http://example.com/2021/02/18/%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97(%E6%94%B9%E9%80%A0%E4%BA%8C%E5%88%86%E6%B3%95)/</id>
+    <published>2021-02-18T13:08:27.473Z</published>
+    <updated>2021-02-18T14:16:02.935Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="旋转数组的最小数字-改造二分法"><a href="#旋转数组的最小数字-改造二分法" class="headerlink" title="旋转数组的最小数字(改造二分法)"></a>旋转数组的最小数字(改造二分法)</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>把一个数组最开始的若干个元素搬到数组的末尾,我们称之为数组的旋转。输入-一个递增排序的数组的一个旋转,输出旋转数组的最小元素。例如数组 {3,4,5,1,2}为{1,2,3,4,5}的一 个旋转,该数组的最小值为1</p><h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p> 利用数组的有序性来提升算法的性能，旋转分开的两部分一定有一部分是有序的，通过观察，最小的数一定是在无序的那一边</p><p>递归到最后两个数的时候，最小的数一定是在右边</p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_</span>旋转数组最小值 </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> arr[])</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> be=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> end=arr.length-<span class="number">1</span>;</span><br><span class="line"><span class="comment">//没有旋转直接返回第一个</span></span><br><span class="line"><span class="keyword">if</span>(arr[be]&lt;arr[end])&#123;</span><br><span class="line"><span class="keyword">return</span> arr[be];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (be+<span class="number">1</span>&lt;end)&#123;</span><br><span class="line"><span class="keyword">int</span> mid=be+((end-be)&gt;&gt;<span class="number">1</span>);</span><br><span class="line"><span class="keyword">if</span>(arr[mid]&gt;=arr[be])&#123;<span class="comment">//左边有序，最小值在右边（无序）</span></span><br><span class="line">be=mid;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">end=mid;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> arr[end];<span class="comment">//最后剩两个元素，右边的位最小值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">System.out.println(f(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">3</span>&#125;));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>若中间的值和左边的值和右边的值相等比如1，0，1，1，1那么应该放弃这个算法，采用扫描法</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;旋转数组的最小数字-改造二分法&quot;&gt;&lt;a href=&quot;#旋转数组的最小数字-改造二分法&quot; class=&quot;headerlink&quot; title=&quot;旋转数组的最小数字(改造二分法)&quot;&gt;&lt;/a&gt;旋转数组的最小数字(改造二分法)&lt;/h1&gt;&lt;h2 id=&quot;问题描述：&quot;&gt;&lt;a h</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/tags/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白上楼梯(递归设计)</title>
+    <link href="http://example.com/2021/02/18/%E5%B0%8F%E7%99%BD%E4%B8%8A%E6%A5%BC%E6%A2%AF(%E9%80%92%E5%BD%92%E8%AE%BE%E8%AE%A1)/"/>
+    <id>http://example.com/2021/02/18/%E5%B0%8F%E7%99%BD%E4%B8%8A%E6%A5%BC%E6%A2%AF(%E9%80%92%E5%BD%92%E8%AE%BE%E8%AE%A1)/</id>
+    <published>2021-02-18T12:14:59.084Z</published>
+    <updated>2021-02-18T12:14:59.085Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>小白正在上楼梯，楼梯有n阶台阶，小白一次可以上1阶，2阶或者3阶，实现一个方法,计算小白有多少种走完楼梯的方式。</p><h1 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h1><p>设n阶台阶的走法数为f(n)。如果只有1个台阶，走法有1种（一步上1个台阶），即f(1)=1；如果有2个台阶，走法有2种（一种是上1阶，再上1 阶，另一种是一步上2阶），即f(2)=2；如果有3个台阶，走法有4种（一种每次1阶，共一种；另一种是2+1，共两种；第三种是3，共1种），即 f(3)=4； </p><p>当有n个台阶（n&gt;3）时，我们缩小问题规模，可以这样想：最后一步有三种情况，走1步（之前上了n-1个台阶，走法为f(n-1)种），走2步（之前上了 n-2个台阶，走法为f(n-2)种），走3步，（之前上了n-1个台阶，走法为f(n-3)种，f(n)=f(n-1)+f(n-2)+f(n-3),n&gt;3</p><h1 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_</span>小白上楼梯 </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line"><span class="keyword">int</span> N=sc.nextInt();</span><br><span class="line"><span class="keyword">int</span> re=f(N);</span><br><span class="line">System.out.println(re);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">2</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">3</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> f(n-<span class="number">1</span>)+f(n-<span class="number">2</span>)+f(n-<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;小白正在上楼梯，楼梯有n阶台阶，小白一次可以上1阶，2阶或者3阶，实现一个方法,计算小白有多少种走完楼梯的方式。&lt;/</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/tags/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二分查找递归解法</title>
+    <link href="http://example.com/2021/02/16/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E9%80%92%E5%BD%92%E8%A7%A3%E6%B3%95/"/>
+    <id>http://example.com/2021/02/16/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E9%80%92%E5%BD%92%E8%A7%A3%E6%B3%95/</id>
+    <published>2021-02-16T14:30:23.110Z</published>
+    <updated>2021-02-18T11:35:57.496Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二分查找递归解法"><a href="#二分查找递归解法" class="headerlink" title="二分查找递归解法"></a>二分查找递归解法</h1><p>全范围内二分查找 等价于三个子问题： 左边找（递归） 中间比 右边找（递归） 注意：左查找和右查找只选其一</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(low&gt;high)</span><br><span class="line"><span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> mid=low+((high-low)&gt;&gt;<span class="number">1</span>);</span><br><span class="line"><span class="keyword">int</span> midVal=arr[mid];</span><br><span class="line"><span class="keyword">if</span>(midVal&lt;key)&#123;</span><br><span class="line"><span class="keyword">return</span> binarySearch(arr,mid+<span class="number">1</span>,high,key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (midVal&gt;key)&#123;</span><br><span class="line"><span class="keyword">return</span> binarySearch(arr,low,mid-<span class="number">1</span>,key);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">return</span> mid;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>找重复 1、找到一种划分方法 2、找到递推公式或者等价转换 都是父问题转化为求解子问题 找变化的量 变化的量通常要作为参数 找到出口 根据参数变化的趋势，对边界进行控制，适时终止递归</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;二分查找递归解法&quot;&gt;&lt;a href=&quot;#二分查找递归解法&quot; class=&quot;headerlink&quot; title=&quot;二分查找递归解法&quot;&gt;&lt;/a&gt;二分查找递归解法&lt;/h1&gt;&lt;p&gt;全范围内二分查找 等价于三个子问题： 左边找（递归） 中间比 右边找（递归） 注意：左查找和</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/tags/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>汉诺塔</title>
@@ -720,144 +828,6 @@
     <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
     <category term="二维数组" scheme="http://example.com/tags/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>查找整数</title>
-    <link href="http://example.com/2021/01/18/%E6%9F%A5%E6%89%BE%E6%95%B4%E6%95%B0/"/>
-    <id>http://example.com/2021/01/18/%E6%9F%A5%E6%89%BE%E6%95%B4%E6%95%B0/</id>
-    <published>2021-01-18T08:55:52.549Z</published>
-    <updated>2021-01-18T10:13:26.231Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给出一个包含n个整数的数列，问整数a在数列中的第一次出现是第几个。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>第一行包含一个整数n。</p><p>第二行包含n个非负整数，为给定的数列，数列中的每个数都不大于10000。</p><p>第三行包含一个整数a，为待查找的数。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>如果a在数列中出现了，输出它第一次出现的位置(位置从1开始编号)，否则输出-1。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>6<br>1 9 4 8 3 9<br>9</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>2</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n &lt;= 1000。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> t=in.nextInt();</span><br><span class="line"><span class="keyword">int</span>[] num=<span class="keyword">new</span> <span class="keyword">int</span>[t];</span><br><span class="line"><span class="keyword">int</span> p=-<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++) &#123;</span><br><span class="line">num[i]=in.nextInt();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> a=in.nextInt();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++) &#123;</span><br><span class="line"><span class="keyword">if</span>(num[i]==a) &#123;</span><br><span class="line">p=i+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(p);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;给出一个包含n个整数的数列，问整数a在数列中的第一次出现是第几个。&lt;/p&gt;
-&lt;h2 id=&quot;资源限制：&quot;&gt;&lt;a hr</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-    <category term="判断" scheme="http://example.com/tags/%E5%88%A4%E6%96%AD/"/>
-    
-    <category term="多行输入" scheme="http://example.com/tags/%E5%A4%9A%E8%A1%8C%E8%BE%93%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数列特征</title>
-    <link href="http://example.com/2021/01/18/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/"/>
-    <id>http://example.com/2021/01/18/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/</id>
-    <published>2021-01-18T08:12:48.225Z</published>
-    <updated>2021-01-18T08:30:49.398Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>给出n个数，找出这n个数的最大值，最小值，和。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>第一行为整数n，表示数的个数。</p><p>第二行有n个数，为给定的n个数，每个数的绝对值都小于10000。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出三行，每行一个整数。第一行表示这些数中的最大值，第二行表示这些数中的最小值，第三行表示这些数的和。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>5<br>1 3 -2 4 5</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>5<br>-2<br>11</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n &lt;= 10000。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>第一次见这题，不是因为题目的逻辑有多难，而是不知道怎么实现多行输入并且逐个处理。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span>[] num = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"><span class="keyword">int</span> max=-<span class="number">2147483648</span>;</span><br><span class="line"><span class="keyword">int</span> min=<span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">num[i] = in.nextInt();</span><br><span class="line"><span class="keyword">if</span>(num[i]&gt;max) &#123;</span><br><span class="line">max=num[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(num[i]&lt;min) &#123;</span><br><span class="line">min=num[i];</span><br><span class="line">&#125;</span><br><span class="line">sum=num[i]+sum;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(max);</span><br><span class="line">System.out.println(min);</span><br><span class="line">System.out.println(sum);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;给出n个数，找出这n个数的最大值，最小值，和。&lt;/p&gt;
-&lt;h2 id=&quot;资源限制：&quot;&gt;&lt;a href=&quot;#资源限制：</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-    <category term="最大值" scheme="http://example.com/tags/%E6%9C%80%E5%A4%A7%E5%80%BC/"/>
-    
-    <category term="最小值" scheme="http://example.com/tags/%E6%9C%80%E5%B0%8F%E5%80%BC/"/>
-    
-    <category term="累加" scheme="http://example.com/tags/%E7%B4%AF%E5%8A%A0/"/>
-    
-    <category term="多行输入" scheme="http://example.com/tags/%E5%A4%9A%E8%A1%8C%E8%BE%93%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字母图形</title>
-    <link href="http://example.com/2021/01/17/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/"/>
-    <id>http://example.com/2021/01/17/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/</id>
-    <published>2021-01-17T15:03:11.121Z</published>
-    <updated>2021-01-18T08:24:26.461Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>利用字母可以组成一些美丽的图形，下面给出了一个例子：</p><p>ABCDEFG</p><p>BABCDEF</p><p>CBABCDE</p><p>DCBABCD</p><p>EDCBABC</p><p>这是一个5行7列的图形，请找出这个图形的规律，并输出一个n行m列的图形。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：256.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入一行，包含两个整数n和m，分别表示你要输出的图形的行数的列数。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出n行，每个m个字符，为你的图形。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>5  7</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>ABCDEFG<br>BABCDEF<br>CBABCDE<br>DCBABCD<br>EDCBABC</p><h2 id="数据规模与约定："><a href="#数据规模与约定：" class="headerlink" title="数据规模与约定："></a>数据规模与约定：</h2><p>1 &lt;= n, m &lt;= 26。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>这题就是一个找规律的题，先设一个char为65来表示A，接下来我们就可以通过对char的加减来实现字母的变化，我们再设一个外层循环来设定要打印的行数，然后这个外层循环内有两个内部循环，第一个内部循环是打印A之前的数的，比如第一行从A开始，这个内层循环就不需要打印，第二行A的前面有B，所以要输出B。第二个循环则是输出从A开始列数减第一个循环输出的个数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span> m=in.nextInt();</span><br><span class="line"><span class="keyword">char</span> A=<span class="number">65</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">0</span>;c&lt;n;c++) &#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> h1=c,w=<span class="number">0</span>;w&lt;c&amp;&amp;w&lt;m;h1--,w++) &#123;</span><br><span class="line">System.out.print((<span class="keyword">char</span>)(A+h1));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> h=<span class="number">0</span>;h&lt;m-c;h++) &#123; </span><br><span class="line">System.out.print((<span class="keyword">char</span>)(A+h));</span><br><span class="line">&#125;</span><br><span class="line">System.out.println();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>因为第一层循环的偏移量和列数的循环是相等的，也就是说输出第零行的时候偏移量也是零不用输出，当然也不能大于列数。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;利用字母可以组成一些美丽的图形，下面给出了一个例子：&lt;/p&gt;
-&lt;p&gt;ABCDEFG&lt;/p&gt;
-&lt;p&gt;BABCDEF&lt;/</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-    <category term="字符串" scheme="http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
