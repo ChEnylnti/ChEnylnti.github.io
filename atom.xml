@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-19T05:20:27.390Z</updated>
+  <updated>2021-02-19T15:21:23.789Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最快效率求出乱序数组中第k小的数</title>
+    <link href="http://example.com/2021/02/19/%E6%9C%80%E5%BF%AB%E6%95%88%E7%8E%87%E6%B1%82%E5%87%BA%E4%B9%B1%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E6%95%B0/"/>
+    <id>http://example.com/2021/02/19/%E6%9C%80%E5%BF%AB%E6%95%88%E7%8E%87%E6%B1%82%E5%87%BA%E4%B9%B1%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E6%95%B0/</id>
+    <published>2021-02-19T08:55:13.032Z</published>
+    <updated>2021-02-19T15:21:23.789Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>以尽量高的效率求出一个乱序数组中按数值顺序的第K个元素值 </p><p>利用快速排序的分区思想，执行完partition之后，左边元素小于q，右边大于q，q的位置为实际排序后的位置，如果它的序列为k，则p为所求元素，大 于k，继续在左半部分查找，小于k，在右半部分查找 </p><p>时间复杂度期望O(n)，最差O(n²)</p><h1 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_</span>第<span class="title">k</span>个元素 </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">selectK</span><span class="params">(<span class="keyword">int</span>[] A,<span class="keyword">int</span> p,<span class="keyword">int</span> r,<span class="keyword">int</span> k)</span></span>&#123;<span class="comment">//k为要找第k个</span></span><br><span class="line"><span class="keyword">int</span> q=_快速排序.partition2(A,p,r);</span><br><span class="line"><span class="keyword">int</span> qK=q-p+<span class="number">1</span>;<span class="comment">//在p~r中第几个</span></span><br><span class="line"><span class="keyword">if</span>(k==qK)&#123;</span><br><span class="line"><span class="keyword">return</span> A[q];</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(k&lt;qK)&#123;<span class="comment">//要找的小在左边找</span></span><br><span class="line"><span class="keyword">return</span> selectK(A,p,q-<span class="number">1</span>,k);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">return</span> selectK(A,q+<span class="number">1</span>,r,k-qK);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span>[] A = &#123;<span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> k = selectK(A, <span class="number">0</span>, A.length - <span class="number">1</span>, <span class="number">6</span>);</span><br><span class="line">System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h1&gt;&lt;p&gt;以尽量高的效率求出一个乱序数组中按数值顺序的第K个元素值 &lt;/p&gt;
+&lt;p&gt;利用快速排序的分区思想，执行完partit</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/tags/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>排序算法</title>
@@ -29,6 +66,42 @@
       
       
     <summary type="html">&lt;h1 id=&quot;排序算法：&quot;&gt;&lt;a href=&quot;#排序算法：&quot; class=&quot;headerlink&quot; title=&quot;排序算法：&quot;&gt;&lt;/a&gt;排序算法：&lt;/h1&gt;&lt;h2 id=&quot;一、冒泡排序&quot;&gt;&lt;a href=&quot;#一、冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;一</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="查找与排序" scheme="http://example.com/tags/%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计一个高效的求a的n次幂的算法</title>
+    <link href="http://example.com/2021/02/18/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E9%AB%98%E6%95%88%E7%9A%84%E6%B1%82a%E7%9A%84n%E6%AC%A1%E5%B9%82%E7%9A%84%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2021/02/18/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E9%AB%98%E6%95%88%E7%9A%84%E6%B1%82a%E7%9A%84n%E6%AC%A1%E5%B9%82%E7%9A%84%E7%AE%97%E6%B3%95/</id>
+    <published>2021-02-18T15:05:16.695Z</published>
+    <updated>2021-02-18T15:17:35.060Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设计一个高效的求a的n次幂的算法"><a href="#设计一个高效的求a的n次幂的算法" class="headerlink" title="设计一个高效的求a的n次幂的算法"></a>设计一个高效的求a的n次幂的算法</h1><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">pow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> res = a;</span><br><span class="line"><span class="keyword">int</span> ex = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//能翻</span></span><br><span class="line"><span class="keyword">while</span> ((ex &lt;&lt; <span class="number">1</span>) &lt;= n) &#123;</span><br><span class="line"><span class="comment">//翻</span></span><br><span class="line">res = res * res;</span><br><span class="line"><span class="comment">//指数</span></span><br><span class="line">ex &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//不能翻</span></span><br><span class="line"><span class="comment">//差n-ex次方没有去乘到结果里面</span></span><br><span class="line"><span class="keyword">return</span> res * pow(a, n - ex);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;设计一个高效的求a的n次幂的算法&quot;&gt;&lt;a href=&quot;#设计一个高效的求a的n次幂的算法&quot; class=&quot;headerlink&quot; title=&quot;设计一个高效的求a的n次幂的算法&quot;&gt;&lt;/a&gt;设计一个高效的求a的n次幂的算法&lt;/h1&gt;&lt;h2 id=&quot;代码：&quot;&gt;&lt;a h</summary>
       
     
     
@@ -717,94 +790,6 @@
     <category term="取余" scheme="http://example.com/tags/%E5%8F%96%E4%BD%99/"/>
     
     <category term="数字字符混合输出" scheme="http://example.com/tags/%E6%95%B0%E5%AD%97%E5%AD%97%E7%AC%A6%E6%B7%B7%E5%90%88%E8%BE%93%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十六进制转十进制</title>
-    <link href="http://example.com/2021/01/19/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6/"/>
-    <id>http://example.com/2021/01/19/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6/</id>
-    <published>2021-01-19T07:40:45.604Z</published>
-    <updated>2021-01-19T10:05:57.802Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>从键盘输入一个不超过8位的正的十六进制数字符串，将它转换为正的十进制数后输出。<br>　　注：十六进制数中的10~15分别用大写的英文字母A、B、C、D、E、F表示。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：512.0MB</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>FFFF</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>65535</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>把十进制转化为十六进制只需要把十进制数的n位乘16的n减一次方即可。把A转化为10则用了ASCII码的偏差值，A的ASCII码是65，所以只需要将ASCII码大于65的值减65加10就可得到十进制数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    String n=in.next();</span><br><span class="line">    <span class="keyword">char</span>[] arr=n.toCharArray();</span><br><span class="line">    <span class="keyword">long</span> r=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i]&gt;=<span class="number">65</span>) &#123;</span><br><span class="line">            arr[i]=(<span class="keyword">char</span>)((<span class="keyword">int</span>)arr[i]-<span class="number">65</span>+<span class="number">10</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            arr[i]=(<span class="keyword">char</span>)(arr[i]-<span class="number">48</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        r=(<span class="keyword">long</span>) (r+arr[i]*Math.pow(<span class="number">16</span>, c));</span><br><span class="line">        c++;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(r);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;从键盘输入一个不超过8位的正的十六进制数字符串，将它转换为正的十进制数后输出。&lt;br&gt;　　注：十六进制数中的10~1</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="进制转换" scheme="http://example.com/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
-    
-    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="字符处理" scheme="http://example.com/tags/%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86/"/>
-    
-    <category term="判断" scheme="http://example.com/tags/%E5%88%A4%E6%96%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>特殊回文数</title>
-    <link href="http://example.com/2021/01/18/%E7%89%B9%E6%AE%8A%E5%9B%9E%E6%96%87%E6%95%B0/"/>
-    <id>http://example.com/2021/01/18/%E7%89%B9%E6%AE%8A%E5%9B%9E%E6%96%87%E6%95%B0/</id>
-    <published>2021-01-18T15:33:11.440Z</published>
-    <updated>2021-01-18T15:33:11.441Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>123321是一个非常特殊的数，它从左边读和从右边读是一样的。<br>　　输入一个正整数n， 编程求所有这样的五位和六位十进制数，满足各位数字之和等于n 。</p><h2 id="资源限制："><a href="#资源限制：" class="headerlink" title="资源限制："></a>资源限制：</h2><p>时间限制：1.0s  内存限制：512.0MB</p><h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入一行，包含一个正整数n。</p><h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>按从小到大的顺序输出满足条件的整数，每个整数占一行。</p><h2 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h2><p>52</p><h2 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h2><p>899998<br>989989<br>998899</p><h2 id="数据规模和约定："><a href="#数据规模和约定：" class="headerlink" title="数据规模和约定："></a>数据规模和约定：</h2><p>1&lt;=n&lt;=54。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">int</span> n=in.nextInt();</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">10000</span>;</span><br><span class="line"><span class="keyword">while</span>(num&lt;=<span class="number">999999</span>) &#123;</span><br><span class="line"><span class="keyword">if</span>(num&lt;<span class="number">100000</span>) &#123;</span><br><span class="line"><span class="keyword">int</span> g=num%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> s=(num/<span class="number">10</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> b=(num/<span class="number">100</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> q=(num/<span class="number">1000</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> w=num/<span class="number">10000</span>;</span><br><span class="line"><span class="keyword">if</span>(g==w&amp;&amp;s==q&amp;&amp;g+s+b+q+w==n) &#123;</span><br><span class="line">System.out.println(num);</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">int</span> g=num%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> s=(num/<span class="number">10</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> b=(num/<span class="number">100</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> q=(num/<span class="number">1000</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> w=(num/<span class="number">10000</span>)%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> sw=num/<span class="number">100000</span>;</span><br><span class="line"><span class="keyword">if</span>(g==sw&amp;&amp;s==w&amp;&amp;b==q&amp;&amp;g+s+b+q+w+sw==n) &#123;</span><br><span class="line">System.out.println(num);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">num++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;p&gt;123321是一个非常特殊的数，它从左边读和从右边读是一样的。&lt;br&gt;　　输入一个正整数n， 编程求所有这样的五位和</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="java" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="练习题" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    <category term="基础练习" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/java/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%BB%83%E4%B9%A0%E9%A2%98/%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="入门" scheme="http://example.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-    <category term="循环" scheme="http://example.com/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-    <category term="回文数" scheme="http://example.com/tags/%E5%9B%9E%E6%96%87%E6%95%B0/"/>
-    
-    <category term="条件语句" scheme="http://example.com/tags/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/"/>
     
   </entry>
   
